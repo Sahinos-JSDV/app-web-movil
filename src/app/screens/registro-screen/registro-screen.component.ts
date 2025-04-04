@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 declare var $:any;
 
@@ -22,7 +23,8 @@ export class RegistroScreenComponent implements OnInit{
   public edades: any[] = [];
 
   constructor(
-    private usuariosService: UsuariosService
+    private usuariosService: UsuariosService,
+    private router: Router
   ){}
 
   ngOnInit(): void {
@@ -55,7 +57,7 @@ export class RegistroScreenComponent implements OnInit{
   }
 
   public goLogin(){
-
+    this.router.navigate(['/']);
   }
 
   showPassword()
@@ -75,6 +77,19 @@ export class RegistroScreenComponent implements OnInit{
       return true;
     }else{
       return false;
+    }
+  }
+
+  public soloLetras(event: KeyboardEvent) {
+    const charCode = event.key.charCodeAt(0);
+    alert("letra presionada")
+    // Permitir solo letras (mayúsculas y minúsculas) y espacio
+    if (
+      !(charCode >= 65 && charCode <= 90) &&  // Letras mayúsculas
+      !(charCode >= 97 && charCode <= 122) && // Letras minúsculas
+      charCode !== 32                         // Espacio
+    ) {
+      event.preventDefault();
     }
   }
 }
