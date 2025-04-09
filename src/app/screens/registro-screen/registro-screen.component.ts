@@ -82,7 +82,8 @@ export class RegistroScreenComponent implements OnInit{
 
   public soloLetras(event: KeyboardEvent) {
     const charCode = event.key.charCodeAt(0);
-    alert("letra presionada")
+    console.log("Letra presionada");
+    ("letra presionada")
     // Permitir solo letras (mayúsculas y minúsculas) y espacio
     if (
       !(charCode >= 65 && charCode <= 90) &&  // Letras mayúsculas

@@ -26,6 +26,7 @@ import { FooterAppComponent } from './partials/footer-app/footer-app.component';
 import { HomeScreenComponent } from './screens/home-screen/home-screen.component';
 import { BasesPromocionScreenComponent } from './screens/bases-promocion-screen/bases-promocion-screen.component';
 import { PoliticaPrivacidadScreenComponent } from './screens/politica-privacidad-screen/politica-privacidad-screen.component';
+import { InstruccionesScreenComponent } from './screens/instrucciones-screen/instrucciones-screen.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { PoliticaPrivacidadScreenComponent } from './screens/politica-privacidad
     FooterAppComponent,
     HomeScreenComponent,
     BasesPromocionScreenComponent,
-    PoliticaPrivacidadScreenComponent
+    PoliticaPrivacidadScreenComponent,
+    InstruccionesScreenComponent
   ],
   imports: [
     BrowserModule,

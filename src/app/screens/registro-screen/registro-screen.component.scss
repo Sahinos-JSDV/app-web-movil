@@ -320,3 +320,15 @@ mat-label{
 ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
   stroke: #FFFFFF;
 }
+
+//Estilos para el checkbox
+::ng-deep .mdc-checkbox__background {
+  transform: scale(1.5);
+  background-color: #F6F4F5;
+  border: 1px solid #F6F4F5;
+}
+
+::ng-deep .mat-mdc-checkbox.mat-mdc-checkbox-checked .mdc-checkbox__background, .mdc-checkbox__ripple {
+  background-color: #f44336 !important;
+  border-color: #f44336 !important;
+}
