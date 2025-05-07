@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-instrucciones-screen',
@@ -9,14 +10,16 @@ export class InstruccionesScreenComponent implements OnInit{
 
   public lista_acciones: any[] = [];
   public isLoading: boolean = false;
-  constructor(){}
+  constructor(
+    private router: Router
+  ){}
 
   ngOnInit(): void {
     this.obtenerAcciones();
   }
 
   public jugar(){
-
+    this.router.navigate(["nuevo-look"]);
   }
 
   public obtenerAcciones(){
